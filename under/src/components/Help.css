@@ -1,0 +1,71 @@
+.help-section {
+    max-width: 1300px;
+    height: 700px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.help-section-text h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.help-section-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+}
+
+.help-section-item {
+    flex-basis: 48%;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 3px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    box-sizing: border-box;
+}
+
+.help-section-item:nth-child(even) {
+    margin-right: 0;
+}
+
+.help-section-item:hover {
+    transform: scale(1.05);
+}
+
+.FaInfoCircle,
+.IoChatboxEllipses,
+.SiGoogledocs,
+.FaMicrophoneLines {
+    font-size: 100px;
+    margin-bottom: 10px;
+    color: #3498db;
+}
+
+.help-section-item h3 {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.help-section-item p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.help-section-item a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.help-section-item a:hover {
+    text-decoration: underline;
+}

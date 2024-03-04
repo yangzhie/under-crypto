@@ -1,0 +1,32 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.heading,
+.main-text {
+    max-width: 600px;
+    margin: 20px;
+}
+
+.column-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.column {
+    flex: 1;
+    max-width: 300px;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+.block-heading,
+.block-text {
+    margin-top: 10px;
+}
