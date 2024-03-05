@@ -1,5 +1,7 @@
 import React from 'react'
+
 import './Help.css'
+
 import { FaInfoCircle } from "react-icons/fa"
 import { IoChatboxEllipses } from "react-icons/io5"
 import { SiGoogledocs } from "react-icons/si"

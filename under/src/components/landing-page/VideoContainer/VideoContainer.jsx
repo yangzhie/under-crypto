@@ -1,4 +1,5 @@
 import React from 'react'
+
 import './VideoContainer.css'
 
 function VideoContainer() {
@@ -25,7 +26,7 @@ function VideoContainer() {
                 </div>
             </div>
 
-            <video autoplay muted loop src="./mixkit-close-up-of-an-ethereum-coin-46993-medium.mp4"></video>
+            <video autoPlay muted loop src="./mixkit-close-up-of-an-ethereum-coin-46993-medium.mp4"></video>
         </div>
     )
 }

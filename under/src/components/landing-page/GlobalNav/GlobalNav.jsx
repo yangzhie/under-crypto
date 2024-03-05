@@ -1,4 +1,5 @@
 import React from 'react'
+
 import './GlobalNav.css'
 
 function GlobalNav() {

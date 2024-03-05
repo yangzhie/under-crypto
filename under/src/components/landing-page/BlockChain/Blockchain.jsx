@@ -1,5 +1,7 @@
 import React from 'react'
+
 import './Blockchain.css'
+
 import { FaUserLock } from "react-icons/fa"
 import { BsFillPeopleFill } from "react-icons/bs"
 import { PiCurrencyBtcFill } from "react-icons/pi"

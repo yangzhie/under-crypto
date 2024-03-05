@@ -1,12 +1,13 @@
 import React from 'react'
+
 import './Footer.css'
 
 function Footer() {
     return (
-        <footer class="crypto-footer">
-            <div class="footer-container">
+        <footer className="crypto-footer">
+            <div className="footer-container">
 
-                <div class="footer-section">
+                <div className="footer-section">
                     <h4>Company</h4>
                     <ul>
                         <li><a href="#">About</a></li>
@@ -16,7 +17,7 @@ function Footer() {
                     </ul>
                 </div>
 
-                <div class="footer-section">
+                <div className="footer-section">
                     <h4>Individuals</h4>
                     <ul>
                         <li><a href="#">Buy & sell</a></li>
@@ -26,7 +27,7 @@ function Footer() {
                     </ul>
                 </div>
 
-                <div class="footer-section">
+                <div className="footer-section">
                     <h4>Learn</h4>
                     <ul>
                         <li><a href="#">What is crypto?</a></li>
@@ -36,7 +37,7 @@ function Footer() {
                     </ul>
                 </div>
 
-                <div class="footer-section">
+                <div className="footer-section">
                     <h4>Support</h4>
                     <ul>
                         <li><a href="#">Help center</a></li>
@@ -46,7 +47,7 @@ function Footer() {
                     </ul>
                 </div>
 
-                <div class="footer-section">
+                <div className="footer-section">
                     <h4>Developers</h4>
                     <ul>
                         <li><a href="#">Cloud</a></li>
@@ -56,21 +57,20 @@ function Footer() {
                     </ul>
                 </div>
 
-                <div class="footer-section">
+                <div className="footer-section">
                     <h4>Newsletter</h4>
                     <p>Subscribe to our newsletter for the latest updates and news.</p>
-                    <form action="#" method="post" class="newsletter-form">
+                    <form action="#" method="post" className="newsletter-form">
                         <input type="email" name="email" placeholder="Enter your email" required />
                         <button type="submit">Subscribe</button>
                     </form>
                 </div>
             </div>
 
-            <div class="footer-bottom">
+            <div className="footer-bottom">
                 <p>&copy; 2024 UnderCrypto. All rights reserved.</p>
             </div>
         </footer>
-
     )
 }
 

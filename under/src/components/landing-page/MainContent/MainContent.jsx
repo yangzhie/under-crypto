@@ -1,10 +1,12 @@
 import React from 'react'
-import './MainContent.css'
+
 import Lottie from 'lottie-react'
-import animationData from '../assets/Animation - 1709449613538.json'
-import staking from '../assets/staking.json'
-import blockchain from '../assets/blockchain.json'
-import latest from '../assets/latest.json'
+import animationData from '../../../assets/Animation - 1709449613538.json'
+import staking from '../../../assets/staking.json'
+import blockchain from '../../../assets/blockchain.json'
+import latest from '../../../assets/latest.json'
+
+import './MainContent.css'
 
 function MainContent() {
     return (
