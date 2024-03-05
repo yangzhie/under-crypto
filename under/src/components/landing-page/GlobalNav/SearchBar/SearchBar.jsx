@@ -1,0 +1,41 @@
+import React from 'react'
+import { useState } from 'react'
+
+import './SearchBar.css'
+
+import { FaSearch } from "react-icons/fa"
+
+function SearchBar({ setResults }) {
+
+    const [input, setInput] = useState('')
+
+    function fetchData(value) {
+        fetch('https://api.coinranking.com/v2/search-suggestions')
+            .then(res => res.json())
+            .then(data => {
+                const results = data.data.coins.filter(coin => {
+                    return (
+                        value &&
+                        coin &&
+                        coin.name &&
+                        coin.name.toLowerCase().includes(value)
+                    )
+                })
+                setResults(results)
+            })
+    }
+
+    function handleChange(value) {
+        setInput(value)
+        fetchData(value)
+    }
+
+    return (
+        <div className="input-wrapper">
+            <FaSearch id='search-icon' />
+            <input type="text" placeholder='Type to search...' value={input} onChange={(e) => handleChange(e.target.value)} />
+        </div>
+    )
+}
+
+export default SearchBar
