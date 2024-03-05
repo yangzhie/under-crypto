@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 
 import Chart from 'chart.js/auto'
-import { Line } from "react-chartjs-2"
-import { ArcElement, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, Filler } from "chart.js"
+import { Line } from 'react-chartjs-2'
+import { ArcElement, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, Filler } from 'chart.js'
 
 Chart.register(
     ArcElement,
@@ -19,29 +19,35 @@ Chart.register(
 export default function ChartVisual({ coinId }) {
 
     const [chartData, setChartData] = useState({})
+    const [range, setRange] = useState('1h')
 
     useEffect(() => {
-        fetch(`https://api.coinranking.com/v2/coin/${coinId}/history?timePeriod=1y`)
-            .then(res => res.json())
-            .then(data => {
+        fetch(`https://api.coinranking.com/v2/coin/${coinId}/history?timePeriod=${range}`)
+            .then((res) => res.json())
+            .then((data) => {
                 setChartData({
-                    labels: data["data"]["history"].map(data => {
+                    labels: data['data']['history'].map((data) => {
                         let date = new Date(data.timestamp * 1000)
 
-                        let day = date.getDay()
+                        let formattedTime
 
-                        let month = date.getMonth()
-
-                        let year = date.getFullYear()
-
-                        let formattedTime = day + '/' + month + '/' + year
+                        if (range === '30d') {
+                            formattedTime = date.toLocaleDateString()
+                        } else if (range === '5y') {
+                            formattedTime = date.getFullYear().toString()
+                        } else {
+                            let day = date.getDate()
+                            let month = date.getMonth() + 1
+                            let year = date.getFullYear()
+                            formattedTime = `${day}/${month}/${year}`
+                        }
 
                         return formattedTime
                     }),
                     datasets: [
                         {
-                            label: "Price",
-                            data: data["data"]["history"].map(data => data.price),
+                            label: 'Price',
+                            data: data['data']['history'].map((data) => data.price),
                             fill: true,
                             backgroundColor: [
                                 'rgba(255, 99, 132, 0.2)',
@@ -61,22 +67,24 @@ export default function ChartVisual({ coinId }) {
                             ],
                             pointRadius: 0,
                             pointHoverRadius: 10,
-                        }
-                    ]
-                })
-
+                        },
+                    ],
+                });
             })
-
-    }, [coinId])
+    }, [coinId, range])
 
     return (
         <>
-            <select>
+            <select onChange={(e) => setRange(e.target.value)} value={range}>
                 <option value="1h">1h</option>
                 <option value="24h">24h</option>
                 <option value="7d">7d</option>
+                <option value="30d">30d</option>
+                <option value="1y">1y</option>
+                <option value="5y">5y</option>
             </select>
-            <div style={{ width: "1400px", height: "1000px" }}>
+
+            <div style={{ width: '1400px', height: '1000px' }}>
                 {chartData && chartData.datasets && (
                     <Line
                         data={chartData}
@@ -87,7 +95,7 @@ export default function ChartVisual({ coinId }) {
                                     reverse: true,
                                     grid: {
                                         display: false,
-                                    }
+                                    },
                                 },
                                 y: {
                                     ticks: {
@@ -95,21 +103,21 @@ export default function ChartVisual({ coinId }) {
                                     },
                                     grid: {
                                         display: false,
-                                    }
+                                    },
                                 },
                             },
                             legend: {
-                                display: false
+                                display: false,
                             },
                             responsive: true,
                             plugins: {
-                                legend: { position: "top" },
-                                title: { display: true, text: "Price" }
-                            }
+                                legend: { display: false },
+                                title: { display: true, text: 'Price' },
+                            },
                         }}
                     />
                 )}
             </div>
         </>
-    )
+    );
 }

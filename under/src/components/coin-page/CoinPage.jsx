@@ -1,6 +1,7 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
 
+import GlobalNavBar from '../landing-page/GlobalNav/GlobalNav'
 import ChartDisplay from './ChartDisplay/ChartDisplay'
 import NewsSection from './NewsSection/NewsSection'
 import SideBar from './SideBar/SideBar'
@@ -13,6 +14,8 @@ function CoinPage() {
 
     return (
         <>
+            <GlobalNavBar />
+
             <div className="wrapper">
                 <div className="left-column">
                     <ChartDisplay coinId={coinId} />
