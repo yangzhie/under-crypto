@@ -39,6 +39,13 @@ const Coin = ({ coinName }) => {
         fetchData();
     }, [coinName, options])
 
+    function formatter(value) {
+        return Intl.NumberFormat('en', {
+            notation: 'compact',
+            maximumSignificantDigits: 4
+        }).format(value)
+    }
+
     return (
         <div className="item">
             <a href="">
@@ -46,11 +53,11 @@ const Coin = ({ coinName }) => {
                 <span className="symbol">{coinData.symbol}</span>
                 <span className="name">{coinData.name}</span>
 
-                <p className="current-price">{coinData.currentPrice}</p>
+                <p className="current-price">{formatter(coinData.currentPrice)}</p>
 
                 <p className="gain-to-date">{coinData.gainToDate}</p>
 
-                <p className="market-cap">{coinData.marketCap}</p>
+                <p className="market-cap">{formatter(coinData.marketCap)}</p>
 
                 <div className="trade-btn">
                     <a href="">Trade</a>

@@ -65,10 +65,23 @@ function ChartDisplay({ coinId, onAdd }) {
                 console.error(`Error fetching data for ${coinId}: ${error}`)
             }
         }
-
         fetchData();
     }, [coinId])
 
+    function formatter(value) {
+        return Intl.NumberFormat('en', {
+            notation: 'compact',
+            maximumSignificantDigits: 4
+        }).format(value)
+    }
+
+    function checkIfInfinite(input) {
+        if (input === '0') {
+            return '∞'
+        } else {
+            return input
+        }
+    }
 
     return (
         <>
@@ -87,7 +100,7 @@ function ChartDisplay({ coinId, onAdd }) {
 
             <div className="chart-display-section">
                 <div className="chart-top-stack">
-                    <span className="chart-current-price">{currentPrice}</span>
+                    <span className="chart-current-price">{formatter(currentPrice)}</span>
                     <p className="chart-gain-percentage">{gainToDate}</p>
                     <p>24H</p>
                 </div>
@@ -97,27 +110,27 @@ function ChartDisplay({ coinId, onAdd }) {
                 <div className="chart-statistics">
                     <div className="chart-market-cap">
                         <div>Market Cap (USD)</div>
-                        <p>{marketCap}</p>
+                        <p>{formatter(marketCap)}</p>
                     </div>
 
                     <div className="chart-24h-vol">
                         <div>24H Volume (USD)</div>
-                        <p>{vol24h}</p>
+                        <p>{formatter(vol24h)}</p>
                     </div>
 
                     <div className="chart-circulating-supply">
                         <div>Circulating Supply</div>
-                        <p>{circSupply}</p>
+                        <p>{formatter(circSupply)}</p>
                     </div>
 
                     <div className="chart-max-supply">
                         <div>Max Supply</div>
-                        <p>{maxSupply}</p>
+                        <p>{checkIfInfinite(formatter(maxSupply))}</p>
                     </div>
 
                     <div className="chart-total-supply">
                         <div>Total Supply</div>
-                        <p>{totalSupply}</p>
+                        <p>{formatter(totalSupply)}</p>
                     </div>
                 </div>
             </div>

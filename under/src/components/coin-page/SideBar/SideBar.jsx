@@ -102,6 +102,13 @@ function SideBar({ coinId }) {
             })
     }, [coinId])
 
+    function formatter(value) {
+        return Intl.NumberFormat('en', {
+            notation: 'compact',
+            maximumSignificantDigits: 4
+        }).format(value)
+    }
+
     return (
         <>
             <div className="right-column">
@@ -128,7 +135,7 @@ function SideBar({ coinId }) {
                         <input type="text" name="" id="" />
                     </div>
 
-                    <h3 className="coin-converted-price">1{symbol} = {currentPrice} USD</h3>
+                    <h3 className="coin-converted-price">1{symbol} = {formatter(currentPrice)} USD</h3>
 
                     <button className='coin-buy'>BUY NOW!</button>
                 </div>
@@ -139,27 +146,27 @@ function SideBar({ coinId }) {
                     </div>
 
                     <div className="coin-stats-current-price">
-                        <p>{symbol} PRICE</p> <p>{currentPrice}</p>
+                        <p>{symbol} PRICE</p> <p>{formatter(currentPrice)}</p>
                     </div>
 
                     <div className="twentyfourh-hi-lo">
-                        <p>24h hi/24h lo</p> <p>{high24h} / {low24h}</p>
+                        <p>24h hi/24h lo</p> <p>{formatter(high24h)} / {formatter(low24h)}</p>
                     </div>
 
                     <div className="sevend-hi-lo">
-                        <p>7d hi/7d lo</p> <p>{high7d} / {low7d}</p>
+                        <p>7d hi/7d lo</p> <p>{formatter(high7d)} / {formatter(low7d)}</p>
                     </div>
 
                     <div className="thirtyd-hi-lo">
-                        <p>30d hi/30d lo</p> <p>{high1mo} / {low1mo}</p>
+                        <p>30d hi/30d lo</p> <p>{formatter(high1mo)} / {formatter(low1mo)}</p>
                     </div>
 
                     <div className="ninetyd-hi-lo">
-                        <p>90d hi/90d lo</p> <p>{highestPrice} / {lowestPrice}</p>
+                        <p>90d hi/90d lo</p> <p>{formatter(highestPrice)} / {formatter(lowestPrice)}</p>
                     </div>
 
                     <div className="ath-atl">
-                        <p>All-time high</p> <p>{ATH}</p>
+                        <p>All-time high</p> <p>{formatter(ATH)}</p>
                     </div>
                 </div>
             </div>
