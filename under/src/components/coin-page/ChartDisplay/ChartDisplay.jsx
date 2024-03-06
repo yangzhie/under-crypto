@@ -1,3 +1,5 @@
+const apiXKey = import.meta.env.VITE_X_API_KEY
+
 import React from 'react'
 import { useState, useEffect } from 'react'
 
@@ -10,7 +12,9 @@ import { CiStar } from "react-icons/ci"
 import { MdIosShare } from "react-icons/md"
 import { IoDownloadOutline } from "react-icons/io5"
 
-function ChartDisplay({ coinId }) {
+function ChartDisplay({ coinId, onAdd }) {
+
+    const [coinData, setCoinData] = useState({})
 
     const [img, setImg] = useState('')
     const [fullName, setFullName] = useState('')
@@ -41,6 +45,31 @@ function ChartDisplay({ coinId }) {
             })
     }, [coinId])
 
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const res = await fetch(`https://api.coinranking.com/v2/coin/${coinId}`)
+                const data = await res.json()
+
+                const coinInfo = {
+                    icon: data.data.coin.iconUrl,
+                    symbol: data.data.coin.symbol,
+                    name: data.data.coin.name,
+                    currentPrice: data.data.coin.price,
+                    marketCap: data.data.coin.marketCap,
+                    change: data.data.coin.change,
+                    rank: data.data.coin.rank
+                }
+                setCoinData(coinInfo)
+            } catch (error) {
+                console.error(`Error fetching data for ${coinId}: ${error}`)
+            }
+        }
+
+        fetchData();
+    }, [coinId])
+
+
     return (
         <>
             <div className="header">
@@ -48,7 +77,10 @@ function ChartDisplay({ coinId }) {
                 <h2>{fullName}</h2>
                 <h3>{symbol}</h3>
 
-                <a href=""><span><CiStar /></span><p>Add to Watchlist</p></a>
+                <a href="#" onClick={() => onAdd(coinData)}>
+                    <span><CiStar /></span>
+                    <p>Add to Watchlist</p>
+                </a>
                 <a href=""><span><MdIosShare /></span><p>Share</p></a>
                 <a href=""><span><IoDownloadOutline /></span><p>Download</p></a>
             </div>

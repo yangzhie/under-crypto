@@ -8,7 +8,7 @@ import SideBar from './SideBar/SideBar'
 
 import './CoinPageGlobal.css'
 
-function CoinPage() {
+function CoinPage({ onAdd }) {
 
     const { coinId } = useParams()
 
@@ -18,7 +18,7 @@ function CoinPage() {
 
             <div className="wrapper">
                 <div className="left-column">
-                    <ChartDisplay coinId={coinId} />
+                    <ChartDisplay coinId={coinId} onAdd={onAdd} />
                     <NewsSection />
                 </div>
 

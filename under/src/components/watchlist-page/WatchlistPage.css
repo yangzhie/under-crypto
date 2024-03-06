@@ -1,0 +1,23 @@
+.full-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+}
+
+aside {
+    grid-area: 1 / 1 / 4 / 2;
+}
+
+.wrapper {
+    grid-area: 1 / 2 / 4 / 4;
+}
+
+.watchlist-header {
+    grid-area: 1 / 2 / 2 / 4;
+}
+
+.card {
+    grid-area: 2 / 2 / 4 / 4;
+}
