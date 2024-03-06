@@ -4,6 +4,8 @@ console.log(apiXKey);
 
 import React, { useState, useEffect } from 'react'
 
+import './Coin.css'
+
 const Coin = ({ coinName }) => {
     const [coinData, setCoinData] = useState({})
 
@@ -46,6 +48,16 @@ const Coin = ({ coinName }) => {
         }).format(value)
     }
 
+    function checkColor(value) {
+        if (value < 0) {
+            return 'negative'
+        } else if (value > 0) {
+            return 'positive'
+        } else {
+            return 'neutral'
+        }
+    }
+
     return (
         <div className="item">
             <a href="">
@@ -55,7 +67,7 @@ const Coin = ({ coinName }) => {
 
                 <p className="current-price">{formatter(coinData.currentPrice)}</p>
 
-                <p className="gain-to-date">{coinData.gainToDate}</p>
+                <p className={`gain-to-date ${checkColor(coinData.gainToDate)}`}>{formatter(coinData.gainToDate)}%</p>
 
                 <p className="market-cap">{formatter(coinData.marketCap)}</p>
 

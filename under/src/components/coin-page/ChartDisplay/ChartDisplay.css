@@ -79,3 +79,15 @@
     margin: 5px 0;
     color: #555;
 }
+
+.positive {
+    color: green;
+}
+
+.negative {
+    color: red;
+}
+
+.neutral {
+    color: grey;
+}

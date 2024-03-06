@@ -41,6 +41,11 @@ export default function ChartVisual({ coinId }) {
                             formattedTime = date.toLocaleDateString()
                         } else if (range === '5y') {
                             formattedTime = date.getFullYear().toString()
+                        } else if (range === '1h' || '24h') {
+                            let second = date.getSeconds()
+                            let minute = date.getMinutes() + 1
+                            let hour = date.getHours()
+                            formattedTime = `${hour}:${minute}:${second}`
                         } else {
                             let day = date.getDate()
                             let month = date.getMonth() + 1

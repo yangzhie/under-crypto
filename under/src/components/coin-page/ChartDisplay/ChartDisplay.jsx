@@ -83,6 +83,16 @@ function ChartDisplay({ coinId, onAdd }) {
         }
     }
 
+    function checkColor(value) {
+        if (value < 0) {
+            return 'negative'
+        } else if (value > 0) {
+            return 'positive'
+        } else {
+            return 'neutral'
+        }
+    }
+
     return (
         <>
             <div className="header">
@@ -101,7 +111,7 @@ function ChartDisplay({ coinId, onAdd }) {
             <div className="chart-display-section">
                 <div className="chart-top-stack">
                     <span className="chart-current-price">{formatter(currentPrice)}</span>
-                    <p className="chart-gain-percentage">{gainToDate}</p>
+                    <p className={`chart-gain-percentage ${checkColor(gainToDate)}`}>{gainToDate}%</p>
                     <p>24H</p>
                 </div>
 
