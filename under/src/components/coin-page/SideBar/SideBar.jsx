@@ -1,13 +1,12 @@
 const apiCoinrankingKey = import.meta.env.VITE_COINRANKING_KEY
 
-console.log(apiCoinrankingKey);
-
 import React from 'react'
 import { useState, useEffect } from 'react'
 
-import './SideBar.css'
 import { SiConvertio } from "react-icons/si"
 import { BsCurrencyExchange } from "react-icons/bs"
+
+import './SideBar.css'
 
 function SideBar({ coinId }) {
 
@@ -37,36 +36,56 @@ function SideBar({ coinId }) {
     }
 
     useEffect(() => {
-        fetch(`https://api.coinranking.com/v2/coin/${coinId}/ohlc?interval=day&limit=1`, options)
-            .then((res) => res.json())
-            .then((data) => {
+        const fetchData = async () => {
+            try {
+                const res = await fetch(`https://api.coinranking.com/v2/coin/${coinId}/ohlc?interval=day&limit=1`, options)
+                const data = await res.json()
+
                 setHigh24h(data.data.ohlc[0].high)
                 setLow24h(data.data.ohlc[0].low)
-            })
+            } catch (error) {
+                `Error fetching data for ${coinId}: ${error}`
+            }
+        }
+        fetchData()
     }, [coinId])
 
     useEffect(() => {
-        fetch(`https://api.coinranking.com/v2/coin/${coinId}/ohlc?interval=week&limit=1`, options)
-            .then((res) => res.json())
-            .then((data) => {
+        const fetchData = async () => {
+            try {
+                const res = await fetch(`https://api.coinranking.com/v2/coin/${coinId}/ohlc?interval=week&limit=1`, options)
+                const data = await res.json()
+
                 setHigh7d(data.data.ohlc[0].high)
                 setLow7d(data.data.ohlc[0].low)
-            })
+            } catch (error) {
+                `Error fetching data for ${coinId}: ${error}`
+            }
+        }
+        fetchData()
     }, [coinId])
 
     useEffect(() => {
-        fetch(`https://api.coinranking.com/v2/coin/${coinId}/ohlc?interval=month&limit=1`, options)
-            .then((res) => res.json())
-            .then((data) => {
+        const fetchData = async () => {
+            try {
+                const res = await fetch(`https://api.coinranking.com/v2/coin/${coinId}/ohlc?interval=month&limit=1`, options)
+                const data = await res.json()
+
                 setHigh1mo(data.data.ohlc[0].high)
                 setLow1mo(data.data.ohlc[0].low)
-            })
+            } catch (error) {
+                `Error fetching data for ${coinId}: ${error}`
+            }
+        }
+        fetchData()
     }, [coinId])
 
     useEffect(() => {
-        fetch(`https://api.coinranking.com/v2/coin/${coinId}/ohlc?interval=month&limit=3`, options)
-            .then((res) => res.json())
-            .then((data) => {
+        const fetchData = async () => {
+            try {
+                const res = await fetch(`https://api.coinranking.com/v2/coin/${coinId}/ohlc?interval=month&limit=3`, options)
+                const data = await res.json()
+
                 const month1high = data.data.ohlc[0].high
                 const month1low = data.data.ohlc[0].low
 
@@ -88,19 +107,29 @@ function SideBar({ coinId }) {
 
                 calculateHigh()
                 calculateLow()
-            })
+            } catch (error) {
+                `Error fetching data for ${coinId}: ${error}`
+            }
+        }
+        fetchData()
     }, [coinId])
 
     useEffect(() => {
-        fetch(`https://api.coinranking.com/v2/coin/${coinId}`, options)
-            .then((res) => res.json())
-            .then((data) => {
+        const fetchData = async () => {
+            try {
+                const res = await fetch(`https://api.coinranking.com/v2/coin/${coinId}`, options)
+                const data = await res.json()
+
                 setATH(data.data.coin.allTimeHigh.price)
                 setCurrentPrice(data.data.coin.price)
 
                 setImg(data.data.coin.iconUrl)
                 setSymbol(data.data.coin.symbol)
-            })
+            } catch (error) {
+                `Error fetching data for ${coinId}: ${error}`
+            }
+        }
+        fetchData()
     }, [coinId])
 
     function formatter(value) {

@@ -8,12 +8,12 @@ function SearchResult({ result }) {
     const navigate = useNavigate()
 
     const handleResultClick = () => {
-        const coinId = result.uuid;
-        navigate(`/coin/${coinId}`);
+        const coinId = result.uuid
+        navigate(`/coin/${coinId}`)
     }
 
     return (
-        <div className='search-result' onClick={handleResultClick}>{result.name}</div >
+        <div className='search-result' onClick={handleResultClick}>{result.name}</div>
     )
 }
 

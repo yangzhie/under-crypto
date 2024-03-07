@@ -9,8 +9,6 @@ import './App.css'
 
 function App() {
 
-  // let storedCoins = JSON.parse(localStorage.getItem('watchlist'))
-
   const [coins, setCoins] = useState([])
 
   function onDelete(coin) {

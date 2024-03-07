@@ -1,11 +1,11 @@
 import React from 'react'
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 import SearchBar from './SearchBar/SearchBar'
 import SearchList from './SearchBar/SearchList'
 
 import './GlobalNav.css'
-import { Link } from 'react-router-dom'
 
 function GlobalNav() {
 

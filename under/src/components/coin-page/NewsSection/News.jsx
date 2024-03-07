@@ -14,9 +14,11 @@ function News() {
     }
 
     useEffect(() => {
-        fetch('https://openapiv1.coinstats.app/news?limit=5', options)
-            .then(res => res.json())
-            .then(data => {
+        const fetchData = async () => {
+            try {
+                const res = await fetch('https://openapiv1.coinstats.app/news?limit=5', options)
+                const data = await res.json()
+
                 const articles = data.result.map(article => {
                     const imgUrl = article.imgUrl
                     const title = article.title
@@ -34,9 +36,12 @@ function News() {
 
                     return { imgUrl, title, link, author, formattedDate }
                 })
-
                 setNewsData(articles)
-            })
+            } catch (error) {
+                console.error(`Error fetching data: ${error}`)
+            }
+        }
+        fetchData()
     }, [])
 
     return (

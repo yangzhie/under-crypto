@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 
-import './CryptoList.css'
-
 import Coin from './Coin.jsx'
+
+import './CryptoList.css'
 
 function CryptoList() {
 
@@ -19,7 +19,7 @@ function CryptoList() {
     }
 
     useEffect(() => {
-        setVisibleCoins(3);
+        setVisibleCoins(3)
     }, [])
 
     return (

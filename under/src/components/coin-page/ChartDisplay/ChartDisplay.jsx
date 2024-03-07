@@ -1,16 +1,14 @@
-const apiXKey = import.meta.env.VITE_X_API_KEY
-
 import React from 'react'
 import { useState, useEffect } from 'react'
 
 import ChartVisual from './ChartVisual'
 
-import './ChartDisplay.css'
-import '../CoinPageGlobal.css'
-
 import { CiStar } from "react-icons/ci"
 import { MdIosShare } from "react-icons/md"
 import { IoDownloadOutline } from "react-icons/io5"
+
+import './ChartDisplay.css'
+import '../CoinPageGlobal.css'
 
 function ChartDisplay({ coinId, onAdd }) {
 
@@ -29,9 +27,11 @@ function ChartDisplay({ coinId, onAdd }) {
 
 
     useEffect(() => {
-        fetch(`https://api.coinranking.com/v2/coin/${coinId}`)
-            .then((res) => res.json())
-            .then((data) => {
+        const fetchData = async () => {
+            try {
+                const res = await fetch(`https://api.coinranking.com/v2/coin/${coinId}`)
+                const data = await res.json()
+
                 setImg(data.data.coin.iconUrl)
                 setFullName(data.data.coin.name)
                 setSymbol(data.data.coin.symbol)
@@ -42,7 +42,11 @@ function ChartDisplay({ coinId, onAdd }) {
                 setCircSupply(data.data.coin.supply.circulating)
                 setMaxSupply(data.data.coin.supply.max)
                 setTotalSupply(data.data.coin.supply.total)
-            })
+            } catch (error) {
+                `Error fetching data for ${coinId}: ${error}`
+            }
+        }
+        fetchData()
     }, [coinId])
 
     useEffect(() => {
@@ -65,7 +69,7 @@ function ChartDisplay({ coinId, onAdd }) {
                 console.error(`Error fetching data for ${coinId}: ${error}`)
             }
         }
-        fetchData();
+        fetchData()
     }, [coinId])
 
     function formatter(value) {

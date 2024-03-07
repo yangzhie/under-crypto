@@ -9,20 +9,23 @@ function SearchBar({ setResults }) {
 
     const [input, setInput] = useState('')
 
-    function fetchData(value) {
-        fetch('https://api.coinranking.com/v2/search-suggestions')
-            .then(res => res.json())
-            .then(data => {
-                const results = data.data.coins.filter(coin => {
-                    return (
-                        value &&
-                        coin &&
-                        coin.name &&
-                        coin.name.toLowerCase().includes(value)
-                    )
-                })
-                setResults(results)
+    const fetchData = async (value) => {
+        try {
+            const res = await fetch('https://api.coinranking.com/v2/search-suggestions')
+            const data = await res.json()
+
+            const results = data.data.coins.filter(coin => {
+                return (
+                    value &&
+                    coin &&
+                    coin.name &&
+                    coin.name.toLowerCase().includes(value)
+                )
             })
+            setResults(results)
+        } catch (error) {
+            console.error(`Error fetching data: ${error}`)
+        }
     }
 
     function handleChange(value) {

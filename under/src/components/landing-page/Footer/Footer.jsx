@@ -6,7 +6,6 @@ function Footer() {
     return (
         <footer className="crypto-footer">
             <div className="footer-container">
-
                 <div className="footer-section">
                     <h4>Company</h4>
                     <ul>

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { motion, useTransform, useViewportScroll, useAnimation } from "framer-motion"
+import { motion, useAnimation } from "framer-motion"
 
 import './Help.css'
 

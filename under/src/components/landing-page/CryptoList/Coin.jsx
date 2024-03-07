@@ -1,14 +1,11 @@
 const apiXKey = import.meta.env.VITE_X_API_KEY
 
-console.log(apiXKey);
-
 import React, { useState, useEffect } from 'react'
-import { motion, useTransform, useViewportScroll, useAnimation } from "framer-motion"
-
+import { motion } from "framer-motion"
 
 import './Coin.css'
 
-const Coin = ({ coinName }) => {
+function Coin({ coinName }) {
     const [coinData, setCoinData] = useState({})
 
     const options = {
@@ -38,9 +35,8 @@ const Coin = ({ coinName }) => {
             } catch (error) {
                 console.error(`Error fetching data for ${coinName}: ${error}`)
             }
-        };
-
-        fetchData();
+        }
+        fetchData()
     }, [coinName, options])
 
     function formatter(value) {
@@ -63,7 +59,7 @@ const Coin = ({ coinName }) => {
     const containerVariants = {
         hidden: { opacity: 0, scale: 0.8 },
         visible: { opacity: 1, scale: 1, transition: { duration: 0.5, ease: 'easeOut' } },
-    };
+    }
 
     return (
         <motion.div

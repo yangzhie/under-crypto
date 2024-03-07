@@ -8,7 +8,6 @@ import './WatchlistPage.css'
 function WatchlistPage({ coins, onDelete }) {
     return (
         <>
-
             <GlobalNav />
 
             <div className="full-wrapper">
@@ -34,7 +33,7 @@ function WatchlistPage({ coins, onDelete }) {
                         />
                     ))}
                 </div>
-            </div >
+            </div>
         </>
     )
 }

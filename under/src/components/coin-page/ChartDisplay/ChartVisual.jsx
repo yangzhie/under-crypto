@@ -22,9 +22,11 @@ export default function ChartVisual({ coinId }) {
     const [range, setRange] = useState('1h')
 
     useEffect(() => {
-        fetch(`https://api.coinranking.com/v2/coin/${coinId}/history?timePeriod=${range}`)
-            .then((res) => res.json())
-            .then((data) => {
+        const fetchData = async () => {
+            try {
+                const res = await fetch(`https://api.coinranking.com/v2/coin/${coinId}/history?timePeriod=${range}`)
+                const data = await res.json()
+
                 const gradient = document.createElement('canvas').getContext('2d').createLinearGradient(0, 0, 0, 1100)
                 gradient.addColorStop(1, 'rgba(0,0,0,1)') // Black
                 gradient.addColorStop(0.33, 'rgba(255, 197, 47, 0.8)') // Traversing through different orange shades
@@ -67,7 +69,11 @@ export default function ChartVisual({ coinId }) {
                         },
                     ],
                 });
-            })
+            } catch (error) {
+                `Error fetching data for ${coinId}: ${error}`
+            }
+        }
+        fetchData()
     }, [coinId, range])
 
     return (

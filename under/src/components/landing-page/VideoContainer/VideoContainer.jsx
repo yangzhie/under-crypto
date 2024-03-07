@@ -1,9 +1,9 @@
 import React from 'react'
+
 import { TypeAnimation } from 'react-type-animation'
 import { MdLanguage } from "react-icons/md"
 
 import './VideoContainer.css'
-import { color } from 'framer-motion'
 
 function VideoContainer() {
     return (
