@@ -1,0 +1,85 @@
+.card {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    background-color: #002817;
+}
+
+.initial img {
+    width: 60px;
+}
+
+.initial {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.owned {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.change-percentage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.final {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.remove-btn button {
+    background-color: beige;
+    color: black;
+    transition: 0.3s ease-in-out;
+}
+
+.remove-btn button:hover {
+    background-color: #ff7575;
+    color: white;
+}
+
+.initial div :nth-child(1) {
+    color: goldenrod;
+    font-weight: bolder;
+}
+
+.initial div :nth-child(2) {
+    color: white;
+}
+
+.owned {
+    color: white;
+}
+
+.owned :nth-child(1) {
+    font-weight: bolder;
+}
+
+.change-percentage :nth-child(1) {
+    color: white;
+    font-weight: bolder;
+}
+
+.final span {
+    font-weight: bolder;
+}
+
+.positive {
+    color: green;
+}
+
+.negative {
+    color: red;
+}
+
+.neutral {
+    color: grey;
+}

@@ -3,31 +3,54 @@ import React from 'react'
 import './Watchlist.css'
 
 function Watchlist({ coin, onDelete }) {
+
+    function formatter(value) {
+        return Intl.NumberFormat('en', {
+            notation: 'compact',
+            maximumSignificantDigits: 4
+        }).format(value)
+    }
+
+    function checkColor(value) {
+        if (value < 0) {
+            return 'negative'
+        } else if (value > 0) {
+            return 'positive'
+        } else {
+            return 'neutral'
+        }
+    }
+
     return (
         <>
-            <img src={coin.iconUrl} alt="" />
+            <div className='card'>
+                <div className="initial">
+                    <img src={coin.iconUrl} />
+                    <div>
+                        <div>{coin.symbol}</div>
+                        <div>{coin.name}</div>
+                    </div>
+                </div>
 
-            <div className="left-hand-side">
-                <div>{coin.symbol}</div>
-                <div>{coin.name}</div>
-            </div>
+                <div className="owned">
+                    <span>Owned</span>
+                    <span>0.0</span>
+                </div>
 
-            <div className="middle-side-1">
-                {coin.marketCap}
-            </div>
+                <div className="change-percentage">
+                    <span>% Change</span>
+                    <span className={checkColor(coin.change)}>{coin.change}%</span>
+                </div>
 
-            <div className="middle-side-2">
-                {coin.change}
-            </div>
+                <div className="final">
+                    <div><span>Current Price:</span> ${formatter(coin.price)}</div>
+                    <div><span>Coin Rank:</span> {coin.rank}</div>
+                </div>
 
-            <div className="right-hand-side">
-                <div>{coin.price}</div>
-                <div>{coin.rank}</div>
-            </div>
-
-            <div className="remove-btn" onClick={() => onDelete(coin)}>
-                <button>Remove from Watchlist</button>
-            </div>
+                <div className="remove-btn" onClick={() => onDelete(coin)}>
+                    <button>Remove</button>
+                </div>
+            </div >
         </>
     )
 }

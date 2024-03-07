@@ -5,8 +5,9 @@ console.log(apiCoinrankingKey);
 import React from 'react'
 import { useState, useEffect } from 'react'
 
-import '../CoinPageGlobal.css'
 import './SideBar.css'
+import { SiConvertio } from "react-icons/si"
+import { BsCurrencyExchange } from "react-icons/bs"
 
 function SideBar({ coinId }) {
 
@@ -111,63 +112,59 @@ function SideBar({ coinId }) {
 
     return (
         <>
-            <div className="right-column">
-                <div className="coin-converter">
-                    <div className="coin-converter-header">
-                        <h2>coin convert</h2>
-                    </div>
-
-                    <p className='amount'>amount</p>
-
-                    <div className="coin-to-be-converted">
-                        <img src={img} />
-                        <p>{symbol}</p>
-                        <input type="text" name="" id="" />
-                    </div>
-
-                    <div className="middle-breaker">
-                        insert svg of conversion
-                    </div>
-
-                    <div className="converted-coin">
-                        <img src="src/assets/usd-circle.png" alt="" />
-                        <p>USD</p>
-                        <input type="text" name="" id="" />
-                    </div>
-
-                    <h3 className="coin-converted-price">1{symbol} = {formatter(currentPrice)} USD</h3>
-
-                    <button className='coin-buy'>BUY NOW!</button>
+            <div className="coin-converter">
+                <div className="coin-converter-header">
+                    <h2>Convert Coins</h2>
                 </div>
 
-                <div className="coin-stats">
-                    <div className="coin-stats-header">
-                        {symbol} PRICE STATS
-                    </div>
+                <div className="coin-to-be-converted">
+                    <img src={img} />
+                    <p style={{ fontWeight: 'bolder' }}>{symbol}</p>
+                    <input type="text" name="" id="" />
+                </div>
 
-                    <div className="coin-stats-current-price">
-                        <p>{symbol} PRICE</p> <p>{formatter(currentPrice)}</p>
-                    </div>
+                <div className="middle-breaker">
+                    <SiConvertio size={40} color='goldenrod' />
+                </div>
 
-                    <div className="twentyfourh-hi-lo">
-                        <p>24h hi/24h lo</p> <p>{formatter(high24h)} / {formatter(low24h)}</p>
-                    </div>
+                <div className="converted-coin">
+                    <BsCurrencyExchange size={30} />
+                    <p style={{ marginLeft: '9px', fontWeight: 'bolder' }}>USD</p>
+                    <input type="text" name="" id="" />
+                </div>
 
-                    <div className="sevend-hi-lo">
-                        <p>7d hi/7d lo</p> <p>{formatter(high7d)} / {formatter(low7d)}</p>
-                    </div>
+                <h3 className="coin-converted-price">1 {symbol} = ${formatter(currentPrice)} USD</h3>
 
-                    <div className="thirtyd-hi-lo">
-                        <p>30d hi/30d lo</p> <p>{formatter(high1mo)} / {formatter(low1mo)}</p>
-                    </div>
+                <button className='coin-buy'>BUY</button>
+            </div>
 
-                    <div className="ninetyd-hi-lo">
-                        <p>90d hi/90d lo</p> <p>{formatter(highestPrice)} / {formatter(lowestPrice)}</p>
-                    </div>
+            <div className="coin-stats">
+                <div className="coin-stats-header">
+                    {symbol} Price Statistics
+                </div>
 
-                    <div className="ath-atl">
-                        <p>All-time high</p> <p>{formatter(ATH)}</p>
-                    </div>
+                <div className="coin-stats-current-price">
+                    <p>Current Price</p> <p>${formatter(currentPrice)}</p>
+                </div>
+
+                <div className="twentyfourh-hi-lo">
+                    <p>24H high / 24H low</p> <p>${formatter(high24h)} / ${formatter(low24h)}</p>
+                </div>
+
+                <div className="sevend-hi-lo">
+                    <p>7d high / 7d low</p> <p>${formatter(high7d)} / ${formatter(low7d)}</p>
+                </div>
+
+                <div className="thirtyd-hi-lo">
+                    <p>30d high / 30d low</p> <p>${formatter(high1mo)} / ${formatter(low1mo)}</p>
+                </div>
+
+                <div className="ninetyd-hi-lo">
+                    <p>90d high / 90d low</p> <p>${formatter(highestPrice)} / ${formatter(lowestPrice)}</p>
+                </div>
+
+                <div className="ath-atl">
+                    <p>All-time high</p> <p>${formatter(ATH)}</p>
                 </div>
             </div>
         </>

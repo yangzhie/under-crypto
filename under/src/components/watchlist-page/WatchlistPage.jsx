@@ -1,37 +1,38 @@
 import React from 'react'
 
 import Watchlist from './Watchlist'
+import GlobalNav from '../landing-page/GlobalNav/GlobalNav'
 
 import './WatchlistPage.css'
 
 function WatchlistPage({ coins, onDelete }) {
     return (
         <>
+
+            <GlobalNav />
+
             <div className="full-wrapper">
                 <aside>
-                    <h2>Watchlists</h2>
-                    <div>watchlist 1</div>
-                    <div>watchlist 2</div>
-                    <div>watchlist 3</div>
-                    <div>watchlist 4</div>
-                    <div>watchlist 5</div>
+                    <h2>Your Watchlists</h2>
+                    <div>Watchlist 1</div>
+                    <div>Watchlist 2</div>
+                    <div>Watchlist 3</div>
+                    <div>Watchlist 4</div>
+                    <div>Watchlist 5</div>
                 </aside>
 
                 <div className="wrapper">
                     <div className="watchlist-header">
-                        <h1>Watchlist 1</h1>
-                        <h2>you have {coins.length} instruments</h2>
+                        <h1>Watchlist 1 <span>{coins.length} instruments</span></h1>
                     </div>
 
-                    <div className='card'>
-                        {coins.map((coin, idx) => (
-                            <Watchlist
-                                key={idx}
-                                onDelete={onDelete}
-                                coin={coin}
-                            />
-                        ))}
-                    </div>
+                    {coins.map((coin, idx) => (
+                        <Watchlist
+                            key={idx}
+                            onDelete={onDelete}
+                            coin={coin}
+                        />
+                    ))}
                 </div>
             </div >
         </>

@@ -26,19 +26,30 @@
 }
 
 .sub-nav img {
-    height: 40px;
-    width: 40px;
     display: inline-block;
     vertical-align: middle;
 }
 
-.sub-nav span {
+.left-side {
+    display: flex;
+    align-items: center;
+}
+
+.left-side a {
     display: inline;
-    vertical-align: middle;
+    color: #097969;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+
+.left-side a:hover {
+    color: goldenrod;
 }
 
 .sub-nav .logo-language {
     margin-right: 10px;
+    height: 40px;
+    width: 40px;
 }
 
 .spotlight-text,
@@ -57,9 +68,14 @@
 .spotlight-sign-up a {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #333;
+    background-color: none;
     color: white;
     text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+
+.spotlight-sign-up a:hover {
+    color: goldenrod;
 }
 
 .spotlight-container {
@@ -85,4 +101,8 @@
     transform: translate(-50%, -50%);
     text-align: center;
     z-index: 3;
+}
+
+.logo {
+    width: 90px;
 }

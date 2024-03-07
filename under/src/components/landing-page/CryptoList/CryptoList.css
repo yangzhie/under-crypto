@@ -21,7 +21,6 @@ img {
 .row a {
     display: flex;
     text-decoration: none;
-    border: 1px solid #ccc;
     margin: 5px;
     width: 100%;
 }
@@ -30,8 +29,7 @@ img {
     max-width: 100px;
 }
 
-.symbol,
-.name,
+.symbol-name,
 .current-price,
 .gain-to-date,
 .market-cap {
@@ -39,23 +37,34 @@ img {
     text-align: center;
 }
 
+.symbol-name {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.symbol-name-inside {
+    display: flex;
+    flex-direction: column;
+}
+
 .trade-btn {
     text-align: center;
-    margin-top: auto;
 }
 
 .trade-btn a {
     text-decoration: none;
-    background-color: #3498db;
-    color: #fff;
+    background-color: beige;
+    color: black;
     padding: 5px 10px;
-    border-radius: 5px;
     width: 80%;
     margin: 10px auto;
+    transition: 0.3s ease-in-out;
 }
 
 .trade-btn a:hover {
-    background-color: #2980b9;
+    background-color: #003e27;
+    color: goldenrod;
 }
 
 h2 {
@@ -76,11 +85,43 @@ a {
 
 .guideline {
     display: flex;
-    padding: 0;
-    margin: 0;
+    font-size: 10px;
+    margin-left: 10px;
+    width: 100%;
+    height: 30px;
+    color: white;
 }
 
-.guideline h2 {
-    padding: 0;
+.cur-price {
+    margin-left: 280px;
+}
+
+.g2d {
+    margin-left: 30px;
+}
+
+.mar-cap {
+    margin-left: 30px;
+}
+
+.trending-heading {
+    font-size: 40px;
+    background-color: beige;
+    color: goldenrod;
+    height: 100px;
     margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.load {
+    padding-bottom: 20px;
+}
+
+.load button {
+    color: black;
+    background-color: beige;
+    box-shadow: none;
+    border: none;
 }

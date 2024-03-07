@@ -8,35 +8,29 @@
     flex-direction: column !important;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* aside {
-    grid-area: 1 / 1 / 4 / 2;
+aside {
+    background-color: #002817;
 }
 
-.wrapper {
-    grid-area: 1 / 2 / 4 / 4;
+aside h2 {
+    color: goldenrod;
+    width: 300px;
+}
+
+aside div {
+    color: beige;
+    text-align: center;
 }
 
 .watchlist-header {
-    grid-area: 1 / 2 / 2 / 4;
+    background-color: beige;
 }
 
-.card {
-    grid-area: 2 / 2 / 4 / 4;
-} */
+.watchlist-header h1 {
+    margin-left: 30px;
+}
+
+.watchlist-header span {
+    font-size: 15px;
+    margin-left: 20px;
+}

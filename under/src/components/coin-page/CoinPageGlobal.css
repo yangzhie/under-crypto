@@ -1,30 +1,14 @@
 .wrapper {
     display: flex;
-    flex-direction: row;
-    gap: 20px;
+    width: 100%;
 }
 
 .left-column {
-    flex: 2;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.header,
-.chart-display-section,
-.news-section {
-    width: 100%;
+    flex: 1;
+    padding: 20px;
 }
 
 .right-column {
     flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.coin-converter,
-.coin-stats {
-    width: 100%;
+    padding: 20px;
 }

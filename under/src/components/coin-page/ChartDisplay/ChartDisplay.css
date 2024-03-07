@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     padding: 20px;
-    background-color: #007bff;
+    background-color: beige;
     color: #fff;
 }
 
@@ -14,14 +14,24 @@
 
 .header h2 {
     margin-right: auto;
+    color: goldenrod;
+}
+
+.header h3 {
+    color: goldenrod;
 }
 
 .header a {
     text-decoration: none;
-    color: #fff;
+    color: black;
     margin-left: 10px;
     display: flex;
     align-items: center;
+    transition: 0.3s ease-in-out;
+}
+
+.header a:hover {
+    color: green;
 }
 
 .header span {
@@ -30,8 +40,6 @@
 
 .chart-display-section {
     padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
     margin-top: 20px;
 }
 
@@ -40,11 +48,15 @@
     align-items: baseline;
 }
 
+.twentyfourhour {
+    margin-left: 15px;
+    color: beige;
+}
+
 .chart-current-price {
-    background-color: #28a745;
-    color: #fff;
+    background-color: beige;
+    color: black;
     padding: 5px 10px;
-    border-radius: 5px;
 }
 
 .chart-gain-percentage {
@@ -56,23 +68,28 @@
 .chart-section {
     height: 300px;
     background-color: #f5f5f5;
-    border: 1px solid #ddd;
-    border-radius: 10px;
     margin-top: 20px;
 }
 
 .chart-statistics {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 20px;
-    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
 }
 
 .chart-statistics div {
-    background-color: #fff;
+    background-color: beige;
     padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+}
+
+.chart-statistics div div {
+    color: goldenrod;
+    font-weight: bolder;
+}
+
+.chart-statistics div p {
+    text-align: center;
+    color: green;
+    font-weight: bold;
 }
 
 .chart-statistics p {
@@ -90,4 +107,8 @@
 
 .neutral {
     color: grey;
+}
+
+.svg-chart {
+    display: flex;
 }

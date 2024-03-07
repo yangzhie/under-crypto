@@ -62,8 +62,7 @@ function MainContent() {
                         <Lottie className='lottie' animationData={animationData} />
                     </div>
                     <div className="content">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, doloremque sit veniam, consequuntur aspernatur, est nisi eos architecto modi assumenda magni incidunt nesciunt enim alias a et non quia pariatur.
-                        Minus facere iure sed doloribus blanditiis sequi commodi cupiditate alias dolor, dignissimos fuga voluptatem modi laudantium ex quo autem obcaecati quas perspiciatis, temporibus suscipit est accusantium velit! Ducimus, ratione corrupti.
+                        <div dangerouslySetInnerHTML={{ __html: '<b style="font-weight: bold; color: goldenrod; font-size: 20px">Cryptocurrency</b> is a digital or virtual form of currency that uses cryptography for security, enabling secure and decentralized transactions on a blockchain. It operates independently of a central authority, such as a government or financial institution, offering a decentralized and often pseudonymous alternative to traditional currencies.' }} />
                     </div>
                 </motion.div>
 
@@ -78,8 +77,7 @@ function MainContent() {
                         <Lottie className='lottie' animationData={latest} />
                     </div>
                     <div className="content">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, doloremque sit veniam, consequuntur aspernatur, est nisi eos architecto modi assumenda magni incidunt nesciunt enim alias a et non quia pariatur.
-                        Minus facere iure sed doloribus blanditiis sequi commodi cupiditate alias dolor, dignissimos fuga voluptatem modi laudantium ex quo autem obcaecati quas perspiciatis, temporibus suscipit est accusantium velit! Ducimus, ratione corrupti.
+                        <div dangerouslySetInnerHTML={{ __html: 'Bitcoin <b style="font-weight: bold; color: goldenrod; font-size: 20px">halving</b> is an event that occurs approximately every four years, reducing the reward miners receive for validating and adding new blocks to the blockchain by 50%. This scarcity mechanism is designed to limit the total supply of Bitcoin, aiming to control inflation and influence its value over time.' }} />
                     </div>
                 </motion.div>
 
@@ -94,8 +92,7 @@ function MainContent() {
                         <Lottie className='lottie' animationData={staking} />
                     </div>
                     <div className="content">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, doloremque sit veniam, consequuntur aspernatur, est nisi eos architecto modi assumenda magni incidunt nesciunt enim alias a et non quia pariatur.
-                        Minus facere iure sed doloribus blanditiis sequi commodi cupiditate alias dolor, dignissimos fuga voluptatem modi laudantium ex quo autem obcaecati quas perspiciatis, temporibus suscipit est accusantium velit! Ducimus, ratione corrupti.
+                        <div dangerouslySetInnerHTML={{ __html: 'Cryptocurrency <b style="font-weight: bold; color: goldenrod; font-size: 20px">staking</b> involves holding and locking a certain amount of a digital currency in a specialized wallet to support the operations of a blockchain network, contributing to transaction validation and security, and, in return, earning additional tokens or rewards over time. Stakers are incentivized for their participation in maintaining the network\'s integrity and functionality.' }} />
                     </div>
                 </motion.div>
 
@@ -110,8 +107,7 @@ function MainContent() {
                         <Lottie className='lottie' animationData={blockchain} />
                     </div>
                     <div className="content">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, doloremque sit veniam, consequuntur aspernatur, est nisi eos architecto modi assumenda magni incidunt nesciunt enim alias a et non quia pariatur.
-                        Minus facere iure sed doloribus blanditiis sequi commodi cupiditate alias dolor, dignissimos fuga voluptatem modi laudantium ex quo autem obcaecati quas perspiciatis, temporibus suscipit est accusantium velit! Ducimus, ratione corrupti.
+                        <div dangerouslySetInnerHTML={{ __html: 'A <b style="font-weight: bold; color: goldenrod; font-size: 20px">blockchain</b> is a decentralized and distributed digital ledger that records transactions across a network of computers, ensuring transparency, security, and immutability of data. It relies on consensus mechanisms and cryptographic techniques to validate and add new blocks, forming a continuously growing chain of chronological and tamper-resistant records.' }} />
                     </div>
                 </motion.div>
             </div>

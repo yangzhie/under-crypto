@@ -15,11 +15,13 @@ function GlobalNav() {
         <>
             <div className="global-nav">
                 <ul>
-                    <li><a href="">Home</a></li>
-                    <li><Link to={"/watchlist"}>watchlist</Link></li>
-                    <li><a href="">Businesses</a></li>
-                    <li><a href="">Developers</a></li>
-                    <li><a href="">Learn</a></li>
+                    <li><img src="src/assets/under-high-resolution-logo-transparent.png" style={{ height: "auto", width: "120px" }} /></li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">About</a></li>
+                    <li><a href="/">Businesses</a></li>
+                    <li><a href="/">Developers</a></li>
+                    <li><a href="/">Learn</a></li>
+                    <li><Link to={"/watchlist"}>Watchlist</Link></li>
                     <li>
                         <div className="search-bar-container">
                             <SearchBar setResults={setResults} />

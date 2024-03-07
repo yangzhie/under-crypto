@@ -73,15 +73,19 @@ const Coin = ({ coinName }) => {
             animate="visible"
         >
             <a href="">
-                <img src={coinData.icon} alt="" />
-                <span className="symbol">{coinData.symbol}</span>
-                <span className="name">{coinData.name}</span>
+                <span className="symbol-name">
+                    <span><img src={coinData.icon} alt="" /></span>
+                    <span className='symbol-name-inside'>
+                        <span className='symbol-crypto-list'>{coinData.symbol}</span>
+                        <span className='symbol-name-list'>{coinData.name}</span>
+                    </span>
+                </span>
 
-                <p className="current-price">{formatter(coinData.currentPrice)}</p>
+                <p className="current-price-coin">${formatter(coinData.currentPrice)}</p>
 
                 <p className={`gain-to-date ${checkColor(coinData.gainToDate)}`}>{formatter(coinData.gainToDate)}%</p>
 
-                <p className="market-cap">{formatter(coinData.marketCap)}</p>
+                <p className="market-cap-coin">${formatter(coinData.marketCap)}</p>
 
                 <div className="trade-btn">
                     <a href="">Trade</a>

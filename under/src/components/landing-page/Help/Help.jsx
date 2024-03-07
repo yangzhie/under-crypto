@@ -36,15 +36,10 @@ function Help() {
 
     useEffect(() => {
         scrollYProgress.on("change", (y) => {
-            console.log("Scroll position:", y)
             if (y >= 0.5) {
                 controls.start('visible')
             }
         })
-
-        return () => {
-            scrollYProgress.off("change")
-        }
     }, [scrollYProgress, controls])
 
     return (
@@ -65,14 +60,14 @@ function Help() {
                         whileHover={{ scale: 1.1 }}
                         className="help-section-item"
                     >
-                        <FaInfoCircle />
+                        <FaInfoCircle size={30} color='goldenrod' />
 
                         <h3>Support centre</h3>
 
-                        <p>View detailed “how to” guides and instructions on navigating the Swyftx platform and using specific features.</p>
+                        <p>View detailed “how to” guides and instructions on navigating the UnderCrypto platform and using specific features.</p>
 
                         <p>
-                            <a href="">Learn More</a>
+                            <a href="" style={{ color: 'goldenrod', textDecoration: 'none' }}>Learn More</a>
                         </p>
                     </motion.li>
 
@@ -81,14 +76,14 @@ function Help() {
                         whileHover={{ scale: 1.1 }}
                         className="help-section-item"
                     >
-                        <IoChatboxEllipses />
+                        <IoChatboxEllipses size={30} color='goldenrod' />
 
                         <h3>Live chat support</h3>
 
                         <p>Send your question via live chat and we’ll reply with a helpful answer - under 10 minutes.</p>
 
                         <p>
-                            <a href="">Live Chat</a>
+                            <a href="" style={{ color: 'goldenrod', textDecoration: 'none' }}>Live Chat</a>
                         </p>
                     </motion.li>
 
@@ -97,14 +92,14 @@ function Help() {
                         whileHover={{ scale: 1.1 }}
                         className="help-section-item"
                     >
-                        <SiGoogledocs />
+                        <SiGoogledocs size={30} color='goldenrod' />
 
                         <h3>Learn about Under</h3>
 
                         <p>Access quality educational resources and expert market analysis to sharpen your crypto and blockchain knowledge.</p>
 
                         <p>
-                            <a href="">Learn More</a>
+                            <a href="" style={{ color: 'goldenrod', textDecoration: 'none' }}>Learn More</a>
                         </p>
                     </motion.li>
 
@@ -113,14 +108,14 @@ function Help() {
                         whileHover={{ scale: 1.1 }}
                         className="help-section-item"
                     >
-                        <FaMicrophoneLines />
+                        <FaMicrophoneLines size={30} color='goldenrod' />
 
                         <h3>Tapping Into Crypto</h3>
 
                         <p>Listen to the Tapping into Crypto podcast for the latest trends and opportunities in cryptocurrency.</p>
 
                         <p>
-                            <a href="">Listen Now</a>
+                            <a href="" style={{ color: 'goldenrod', textDecoration: 'none' }}>Listen Now</a>
                         </p>
                     </motion.li>
                 </motion.ul>

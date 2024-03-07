@@ -32,7 +32,7 @@ function ChartDisplay({ coinId, onAdd }) {
         fetch(`https://api.coinranking.com/v2/coin/${coinId}`)
             .then((res) => res.json())
             .then((data) => {
-                setImg(data.data.coin.iconurl)
+                setImg(data.data.coin.iconUrl)
                 setFullName(data.data.coin.name)
                 setSymbol(data.data.coin.symbol)
                 setCurrentPrice(data.data.coin.price)
@@ -52,10 +52,10 @@ function ChartDisplay({ coinId, onAdd }) {
                 const data = await res.json()
 
                 const coinInfo = {
-                    icon: data.data.coin.iconUrl,
+                    iconUrl: data.data.coin.iconUrl,
                     symbol: data.data.coin.symbol,
                     name: data.data.coin.name,
-                    currentPrice: data.data.coin.price,
+                    price: data.data.coin.price,
                     marketCap: data.data.coin.marketCap,
                     change: data.data.coin.change,
                     rank: data.data.coin.rank
@@ -101,18 +101,18 @@ function ChartDisplay({ coinId, onAdd }) {
                 <h3>{symbol}</h3>
 
                 <a href="#" onClick={() => onAdd(coinData)}>
-                    <span><CiStar /></span>
+                    <span className='svg-chart'><CiStar color='goldenrod' /></span>
                     <p>Add to Watchlist</p>
                 </a>
-                <a href=""><span><MdIosShare /></span><p>Share</p></a>
-                <a href=""><span><IoDownloadOutline /></span><p>Download</p></a>
+                <a href=""><span className='svg-chart'><MdIosShare color='goldenrod' /></span><p>Share</p></a>
+                <a href=""><span className='svg-chart'><IoDownloadOutline color='goldenrod' /></span><p>Download</p></a>
             </div>
 
             <div className="chart-display-section">
                 <div className="chart-top-stack">
-                    <span className="chart-current-price">{formatter(currentPrice)}</span>
+                    <span className="chart-current-price">${formatter(currentPrice)}</span>
                     <p className={`chart-gain-percentage ${checkColor(gainToDate)}`}>{gainToDate}%</p>
-                    <p>24H</p>
+                    <p className='twentyfourhour'>[24H]</p>
                 </div>
 
                 <ChartVisual coinId={coinId} />
@@ -120,12 +120,12 @@ function ChartDisplay({ coinId, onAdd }) {
                 <div className="chart-statistics">
                     <div className="chart-market-cap">
                         <div>Market Cap (USD)</div>
-                        <p>{formatter(marketCap)}</p>
+                        <p>${formatter(marketCap)}</p>
                     </div>
 
                     <div className="chart-24h-vol">
                         <div>24H Volume (USD)</div>
-                        <p>{formatter(vol24h)}</p>
+                        <p>${formatter(vol24h)}</p>
                     </div>
 
                     <div className="chart-circulating-supply">
@@ -143,7 +143,7 @@ function ChartDisplay({ coinId, onAdd }) {
                         <p>{formatter(totalSupply)}</p>
                     </div>
                 </div>
-            </div>
+            </div >
         </>
     )
 }

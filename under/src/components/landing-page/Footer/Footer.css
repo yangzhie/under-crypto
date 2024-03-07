@@ -1,7 +1,6 @@
 .crypto-footer {
     background-color: #222;
     color: #fff;
-    padding: 40px 0;
 }
 
 .footer-container {
@@ -13,11 +12,13 @@
 .footer-section {
     flex-basis: 30%;
     margin-bottom: 20px;
+    margin-left: 10px;
 }
 
 .footer-section h4 {
     font-size: 20px;
     margin-bottom: 10px;
+    color: beige;
 }
 
 .footer-section p {
@@ -38,7 +39,7 @@
 }
 
 .footer-section a:hover {
-    color: #3498db;
+    color: green;
 }
 
 .newsletter-form {
@@ -52,19 +53,16 @@
     border: none;
     border-radius: 5px 0 0 5px;
     margin-right: 5px;
+    color: beige;
 }
 
 .newsletter-form button {
     width: 30%;
-    background-color: #3498db;
-    color: #fff;
-    border: none;
-    padding: 10px;
-    border-radius: 0 5px 5px 0;
+    background-color: beige;
+    color: green;
     cursor: pointer;
 }
 
 .footer-bottom {
-    margin-top: 20px;
-    text-align: center;
+    text-align: end;
 }

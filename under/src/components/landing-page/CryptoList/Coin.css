@@ -9,3 +9,19 @@
 .neutral {
     color: grey;
 }
+
+.symbol-crypto-list {
+    color: goldenrod;
+}
+
+.symbol-name-list {
+    color: beige;
+}
+
+.current-price-coin {
+    color: beige;
+}
+
+.market-cap-coin {
+    color: beige;
+}

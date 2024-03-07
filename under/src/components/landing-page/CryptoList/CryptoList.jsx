@@ -24,13 +24,13 @@ function CryptoList() {
 
     return (
         <div className="crypto-list">
-            <h2>Trending Crypto Assets</h2>
+            <h2 className='trending-heading'>Trending Crypto Assets</h2>
             <div className="row">
                 <div className="row-flex">
                     <div className="guideline">
-                        <h2>Current Price</h2>
-                        <h2>Gain to Date</h2>
-                        <h2>Market Cap</h2>
+                        <h2 className='cur-price'>Current Price</h2>
+                        <h2 className='g2d'>Gain to Date (%)</h2>
+                        <h2 className='mar-cap'>Market Cap</h2>
                     </div>
 
                     {['bitcoin', 'ethereum', 'solana', 'cardano', 'ripple', 'dogecoin', 'litecoin']

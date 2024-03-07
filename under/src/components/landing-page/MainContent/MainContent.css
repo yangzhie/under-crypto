@@ -4,17 +4,13 @@
     align-items: center;
 }
 
-/* .informational {
-    flex: 0.5;
-    padding: 20px;
-} */
-
 .informational-card {
     /* margin-bottom: 40px; */
     display: flex;
     justify-content: space-between;
     gap: 30px;
     padding-top: 10px;
+    background-color: beige;
 }
 
 .content {
@@ -23,16 +19,10 @@
     /* padding-top: 50px; */
     align-items: center;
     justify-content: center;
+    color: black;
 }
 
-.image {
-    /* display: flex;
-    width: 0;
-    flex-direction: column;
-    flex: 0.25;
-    justify-content: flex-start;
-    align-items: flex-start; */
-}
+.image {}
 
 .image>div {
     width: 300px;
