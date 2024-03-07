@@ -3,6 +3,8 @@ const apiXKey = import.meta.env.VITE_X_API_KEY
 console.log(apiXKey);
 
 import React, { useState, useEffect } from 'react'
+import { motion, useTransform, useViewportScroll, useAnimation } from "framer-motion"
+
 
 import './Coin.css'
 
@@ -58,8 +60,18 @@ const Coin = ({ coinName }) => {
         }
     }
 
+    const containerVariants = {
+        hidden: { opacity: 0, scale: 0.8 },
+        visible: { opacity: 1, scale: 1, transition: { duration: 0.5, ease: 'easeOut' } },
+    };
+
     return (
-        <div className="item">
+        <motion.div
+            className="item"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+        >
             <a href="">
                 <img src={coinData.icon} alt="" />
                 <span className="symbol">{coinData.symbol}</span>
@@ -75,7 +87,7 @@ const Coin = ({ coinName }) => {
                     <a href="">Trade</a>
                 </div>
             </a>
-        </div>
+        </motion.div>
     )
 }
 

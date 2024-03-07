@@ -1,12 +1,31 @@
 .full-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
+    display: flex;
+    justify-content: space-evenly;
 }
 
-aside {
+.wrapper {
+    display: flex;
+    flex-direction: column !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* aside {
     grid-area: 1 / 1 / 4 / 2;
 }
 
@@ -20,4 +39,4 @@ aside {
 
 .card {
     grid-area: 2 / 2 / 4 / 4;
-}
+} */

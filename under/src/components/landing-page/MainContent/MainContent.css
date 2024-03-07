@@ -4,58 +4,41 @@
     align-items: center;
 }
 
-.informational {
+/* .informational {
     flex: 0.5;
     padding: 20px;
-}
+} */
 
-.learn,
-.halving,
-.staking,
-.blockchain {
+.informational-card {
+    /* margin-bottom: 40px; */
     display: flex;
-    align-items: stretch;
-}
-
-.image {
-    flex: 1;
-    display: flex;
-}
-
-.image {
-    flex: 0 0 auto;
-    margin-right: 20px;
-}
-
-.image img {
-    width: 300px;
+    justify-content: space-between;
+    gap: 30px;
+    padding-top: 10px;
 }
 
 .content {
-    flex: 1;
     display: flex;
-    flex-direction: column;
+    width: 700px;
+    /* padding-top: 50px; */
+    align-items: center;
     justify-content: center;
 }
 
-.svg-animations {
-    display: flex;
+.image {
+    /* display: flex;
+    width: 0;
     flex-direction: column;
     flex: 0.25;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: flex-start; */
 }
 
-.svg-animations>div {
+.image>div {
     width: 300px;
-}
-
-.animation {
-    display: flex;
-    align-items: center;
 }
 
 .lottie {
     width: 100%;
-    height: auto;
+
 }
