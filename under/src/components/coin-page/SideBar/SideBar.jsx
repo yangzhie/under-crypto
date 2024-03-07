@@ -2,6 +2,7 @@ const apiCoinrankingKey = import.meta.env.VITE_COINRANKING_KEY
 
 import React from 'react'
 import { useState, useEffect } from 'react'
+import { checkColor, formatter } from '../../../utils'
 
 import { SiConvertio } from "react-icons/si"
 import { BsCurrencyExchange } from "react-icons/bs"
@@ -131,13 +132,6 @@ function SideBar({ coinId }) {
         }
         fetchData()
     }, [coinId])
-
-    function formatter(value) {
-        return Intl.NumberFormat('en', {
-            notation: 'compact',
-            maximumSignificantDigits: 4
-        }).format(value)
-    }
 
     return (
         <>

@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
+import { checkColor, formatter, checkIfInfinite } from '../../../utils'
 
 import ChartVisual from './ChartVisual'
 
@@ -71,31 +72,6 @@ function ChartDisplay({ coinId, onAdd }) {
         }
         fetchData()
     }, [coinId])
-
-    function formatter(value) {
-        return Intl.NumberFormat('en', {
-            notation: 'compact',
-            maximumSignificantDigits: 4
-        }).format(value)
-    }
-
-    function checkIfInfinite(input) {
-        if (input === '0') {
-            return '∞'
-        } else {
-            return input
-        }
-    }
-
-    function checkColor(value) {
-        if (value < 0) {
-            return 'negative'
-        } else if (value > 0) {
-            return 'positive'
-        } else {
-            return 'neutral'
-        }
-    }
 
     return (
         <>

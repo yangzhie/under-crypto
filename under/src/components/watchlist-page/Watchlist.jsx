@@ -1,26 +1,9 @@
 import React from 'react'
+import { checkColor, formatter } from '../../utils'
 
 import './Watchlist.css'
 
 function Watchlist({ coin, onDelete }) {
-
-    function formatter(value) {
-        return Intl.NumberFormat('en', {
-            notation: 'compact',
-            maximumSignificantDigits: 4
-        }).format(value)
-    }
-
-    function checkColor(value) {
-        if (value < 0) {
-            return 'negative'
-        } else if (value > 0) {
-            return 'positive'
-        } else {
-            return 'neutral'
-        }
-    }
-
     return (
         <>
             <div className='card'>

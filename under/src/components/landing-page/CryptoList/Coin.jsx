@@ -2,6 +2,7 @@ const apiXKey = import.meta.env.VITE_X_API_KEY
 
 import React, { useState, useEffect } from 'react'
 import { motion } from "framer-motion"
+import { checkColor, formatter } from '../../../utils'
 
 import './Coin.css'
 
@@ -38,23 +39,6 @@ function Coin({ coinName }) {
         }
         fetchData()
     }, [coinName, options])
-
-    function formatter(value) {
-        return Intl.NumberFormat('en', {
-            notation: 'compact',
-            maximumSignificantDigits: 4
-        }).format(value)
-    }
-
-    function checkColor(value) {
-        if (value < 0) {
-            return 'negative'
-        } else if (value > 0) {
-            return 'positive'
-        } else {
-            return 'neutral'
-        }
-    }
 
     const containerVariants = {
         hidden: { opacity: 0, scale: 0.8 },
