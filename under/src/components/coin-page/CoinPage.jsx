@@ -19,13 +19,15 @@ function CoinPage({ onAdd }) {
             <div className="wrapper">
                 <div className="left-column">
                     <ChartDisplay coinId={coinId} onAdd={onAdd} />
-                    <NewsSection />
                 </div>
 
                 <div className="right-column">
                     <SideBar coinId={coinId} />
                 </div>
             </div>
+
+            <NewsSection />
+
         </>
     )
 }

@@ -20,7 +20,7 @@ function WatchlistPage({ coins, onDelete }) {
                     <div>Watchlist 5</div>
                 </aside>
 
-                <div className="wrapper">
+                <div className="mini-wrapper">
                     <div className="watchlist-header">
                         <h1>Watchlist 1 <span>{coins.length} instruments</span></h1>
                     </div>

@@ -3,9 +3,10 @@
     justify-content: space-evenly;
 }
 
-.wrapper {
+.mini-wrapper {
     display: flex;
-    flex-direction: column !important;
+    flex-direction: column;
+    width: 100%;
 }
 
 aside {

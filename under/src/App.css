@@ -1,27 +1,7 @@
-.wrapper {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-}
-
-.left-column {
-    flex: 2;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
 .header,
 .chart-display-section,
 .news-section {
     width: 100%;
-}
-
-.right-column {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
 }
 
 .coin-converter,

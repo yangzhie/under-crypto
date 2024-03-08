@@ -1,8 +1,10 @@
 .news-section {
     padding: 20px;
     margin-top: 20px;
-    display: grid;
+    display: flex;
+    flex-direction: column;
     background-color: beige;
+    align-items: center;
 }
 
 .news-header {
@@ -34,10 +36,23 @@
 
 .article-footer {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
     color: #777;
     margin-top: 10px;
+    margin-left: 10px;
+}
+
+.vert-line {
+    margin-left: 5px;
+}
+
+.news-header p {
+    margin-left: 10px;
+}
+
+.news-header span {
+    margin-left: 10px;
 }
 
 .load-more {
@@ -48,7 +63,6 @@
     border-radius: 2px;
     cursor: pointer;
     width: 25%;
-    justify-self: center;
     transition: 0.3s ease-in-out;
 }
 

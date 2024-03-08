@@ -71,6 +71,7 @@
     flex-direction: column;
     background-color: beige;
     padding: 20px;
+    margin-left: 50px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 

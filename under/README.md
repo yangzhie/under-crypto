@@ -4,11 +4,13 @@ UnderCrypto is a cryptocurrency exchange with a user-friendly GUI. It is an SPA 
 Due to the limitations of the a public API, the search bar is limited to searching a specific coin. However, by viewing [this particular](https://api.coinranking.com/v2/coins) JSON formatted page, you can obtain the uuid of any coin and enter it into UnderCrypto's addess bar in the format of '/coin/{uuid}' and the corresponding cryptocurrency's page should be available.
 
 **Live Project:** [View my live project!]()
+**Trello Board:** [My board!](https://trello.com/b/QiMFfFiP/crypto-exchange)
 
 ### :page_with_curl: Technologies used
 - HTML, CSS, JavaScript
 - NodeJS, ReactJS
 - Coinranking API, Kraken API, CoinStats API
+- Framer motion, Type Animation, Observer & Intl API
 
 ### :black_nib: Approach
 I started the project off by planning first choosing something I had interest in building and aligned with an
@@ -23,17 +25,23 @@ At this time, I was very ahead of time before the project's deadline, so I decid
 
 ### :telescope: Screenshots
 #### Wireframes
-![Wireframe One]()
-![Wireframe Two]()
-![Wireframe Three]()
-
-#### Trello Board
-![Trello Board]()
+![Wireframe One](src/assets/wireframe1.PNG)
+![Wireframe Two](src/assets/wireframe2.PNG)
+![Wireframe Three](src/assets/wireframe3.PNG)
 
 #### Project Screenshots
-![Landing Page]()
-![Coin Page]()
-![Watchlist Page]()
+##### Landing Page
+![Landing Page One](src/assets/landingpage1.PNG)
+![Landing Page Two](src/assets/landingpage2.PNG)
+![Landing Page Three](src/assets/landingpage3.PNG)
+![Landing Page Four](src/assets/landingpage4.PNG)
+![Landing Page Five](src/assets/landingpage5.PNG)
+
+##### Coin Page
+![Coin Page](src/assets/coinpage.PNG)
+
+##### Watchlist Page
+![Watchlist Page](src/assets/watchlistpage.PNG)
 
 ### :pencil: Lessons Learnt
 - Planning before a project is essential to save time and brain power. Everything may not go according to plan, but it's all part of the experience.
@@ -50,3 +58,5 @@ At this time, I was very ahead of time before the project's deadline, so I decid
 - Make the watchlist page more responsive
 - Currency/coin conversion should be displayed in its section as the user types in a number
 - Make a backend to link it and enable a sign up and login feature
+- Re-do the coin page CSS
+- Make the news API load button load more
