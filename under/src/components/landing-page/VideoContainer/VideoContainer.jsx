@@ -15,7 +15,7 @@ function VideoContainer() {
                     </div>
 
                     <div className="left-side">
-                        <MdLanguage style={{ width: "30px", height: "30px", color: "white", marginTop: "5px" }} /> <span style={{ color: "white" }}>|</span> <a href="">Login</a>
+                        <MdLanguage style={{ width: "30px", height: "30px", color: "white", marginTop: "5px" }} /> <span style={{ color: "white", marginLeft: "25px" }}>|</span> <a href="">Login</a>
                     </div>
                 </div>
 
@@ -42,7 +42,7 @@ function VideoContainer() {
                     </div>
 
                     <div className="spotlight-sign-up">
-                        <a href="">sign up</a>
+                        <a href="">Sign Up</a>
                     </div>
                 </div>
 

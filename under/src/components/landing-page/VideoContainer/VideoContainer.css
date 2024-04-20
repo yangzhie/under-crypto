@@ -1,6 +1,5 @@
 .video-container {
     position: relative;
-    width: 100%;
     height: 100vh;
     overflow: hidden;
 }
@@ -36,7 +35,8 @@
 }
 
 .left-side a {
-    display: inline;
+    display: flex;
+    width: 100px;
     color: #097969;
     text-decoration: none;
     transition: 0.3s ease-in-out;

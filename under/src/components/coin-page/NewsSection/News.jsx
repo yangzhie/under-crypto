@@ -54,7 +54,7 @@ function News() {
                     </div>
                     <div className="article-footer">
                         <span>{article.author}</span>
-                        <div className="vert-line">|</div>
+                        <div className="vert-line" style={{ marginRight: "10px", marginLeft: "10px" }}>|</div>
                         <span>{article.formattedDate}</span>
                     </div>
                 </a>

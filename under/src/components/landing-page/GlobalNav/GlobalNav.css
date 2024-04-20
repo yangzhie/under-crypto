@@ -1,5 +1,5 @@
 * {
-    font-family: "Cinzel", serif;
+    font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
 }
@@ -9,14 +9,14 @@ html {
 }
 
 .global-nav {
-    top: 0;
-    width: 100%;
+    display: flex;
     position: sticky;
     z-index: 100;
-    overflow: visible;
+    justify-content: space-evenly;
 }
 
 .global-nav ul {
+    display: flex;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -34,7 +34,7 @@ html {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-family: "Della Respira", serif;
+    font-family: "Inter", sans-serif;
     font-weight: 400;
     font-style: normal;
     transition: 0.3s ease-in-out;

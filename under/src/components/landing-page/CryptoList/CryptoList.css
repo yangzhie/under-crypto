@@ -109,10 +109,10 @@ a {
     background-color: beige;
     color: goldenrod;
     height: 100px;
-    margin: 0;
     display: flex;
+    margin: 0;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
 }
 
 .load {
