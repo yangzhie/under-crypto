@@ -1,20 +1,22 @@
 .wrapper {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
+    gap: 20px;
 }
 
 .left-column {
-    width: 1425px;
-    height: 1300px;
+    width: 1000px;
+    height: 700px;
+    margin-top: 30px;
 }
 
 .right-column {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex: 1;
-    padding-top: 20px;
     align-items: center;
+    margin-top: 30px;
 }
 
 select {

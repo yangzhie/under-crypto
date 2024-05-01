@@ -1,10 +1,11 @@
 .results-list {
     position: absolute;
-    width: 100%;
+    width: 330px;
     background-color: white;
     display: flex;
     flex-direction: column;
     margin-top: 1rem;
+    margin-left: 20px;
     max-height: 300px;
     overflow-y: scroll;
     z-index: 101;

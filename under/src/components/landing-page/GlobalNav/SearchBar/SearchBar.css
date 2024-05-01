@@ -1,20 +1,19 @@
 .input-wrapper {
     background-color: beige;
     width: 100%;
-    height: 2.5rem;
-    padding: 0 15px;
     display: flex;
     align-items: center;
+    margin-left: 20px;
 }
 
 input {
     background-color: transparent;
     border: none;
-    height: 100%;
+    height: 45.2px;
     font-size: 1.25rem;
     width: 100%;
-    margin-left: 5px;
     color: black;
+    margin-left: 10px;
 }
 
 input:focus {
@@ -23,4 +22,5 @@ input:focus {
 
 #search-icon {
     color: rgb(1 45 27);
+    margin-left: 10px;
 }

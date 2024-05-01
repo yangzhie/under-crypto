@@ -25,23 +25,23 @@ At this time, I was very ahead of time before the project's deadline, so I decid
 
 ### :telescope: Screenshots
 #### Wireframes
-![Wireframe One](src/assets/wireframe1.PNG)
-![Wireframe Two](src/assets/wireframe2.PNG)
-![Wireframe Three](src/assets/wireframe3.PNG)
+![Wireframe One](under/src/assets/wireframe1.PNG)
+![Wireframe Two](under/src/assets/wireframe2.PNG)
+![Wireframe Three](under/src/assets/wireframe3.PNG)
 
 #### Project Screenshots
 ##### Landing Page
-![Landing Page One](src/assets/landingpage1.PNG)
-![Landing Page Two](src/assets/landingpage2.PNG)
-![Landing Page Three](src/assets/landingpage3.PNG)
-![Landing Page Four](src/assets/landingpage4.PNG)
-![Landing Page Five](src/assets/landingpage5.PNG)
+![Landing Page One](under/src/assets/landingpage1.PNG)
+![Landing Page Two](under/src/assets/landingpage2.PNG)
+![Landing Page Three](under/src/assets/landingpage3.PNG)
+![Landing Page Four](under/src/assets/landingpage4.PNG)
+![Landing Page Five](under/src/assets/landingpage5.PNG)
 
 ##### Coin Page
-![Coin Page](src/assets/coinpage.PNG)
+![Coin Page](under/src/assets/coinpage.PNG)
 
 ##### Watchlist Page
-![Watchlist Page](src/assets/watchlistpage.PNG)
+![Watchlist Page](under/src/assets/watchlistpage.PNG)
 
 ### :pencil: Lessons Learnt
 - Planning before a project is essential to save time and brain power. Everything may not go according to plan, but it's all part of the experience.

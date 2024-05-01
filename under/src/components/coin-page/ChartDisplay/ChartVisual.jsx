@@ -87,7 +87,7 @@ export default function ChartVisual({ coinId }) {
                 <option value="5y">5y</option>
             </select>
 
-            <div style={{ width: '1400px', height: '1000px' }}>
+            <div style={{ height: "450px" }}>
                 {chartData && chartData.datasets && (
                     <Line
                         data={chartData}

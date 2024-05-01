@@ -15,7 +15,7 @@ function GlobalNav() {
         <>
             <div className="global-nav">
                 <ul>
-                    <li><img src="src/assets/under-high-resolution-logo-transparent.png" style={{ height: "auto", width: "120px" }} /></li>
+                    <li><img src="/under-high-resolution-logo-transparent.png" /></li>
                     <li><a href="/">Home</a></li>
                     <li><a href="/">About</a></li>
                     <li><a href="/">Businesses</a></li>

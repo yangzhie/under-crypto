@@ -142,7 +142,7 @@ function SideBar({ coinId }) {
 
                 <div className="coin-to-be-converted">
                     <img src={img} />
-                    <p style={{ fontWeight: 'bolder' }}>{symbol}</p>
+                    <p>{symbol}</p>
                     <input type="text" name="" id="" />
                 </div>
 
@@ -151,14 +151,16 @@ function SideBar({ coinId }) {
                 </div>
 
                 <div className="converted-coin">
-                    <BsCurrencyExchange size={30} />
-                    <p style={{ marginLeft: '9px', fontWeight: 'bolder' }}>USD</p>
+                    <BsCurrencyExchange style={{ marginLeft: "10px" }} size={30} />
+                    <p>USD</p>
                     <input type="text" name="" id="" />
                 </div>
 
-                <h3 className="coin-converted-price">1 {symbol} = ${formatter(currentPrice)} USD</h3>
+                <div className='coin-bottom'>
+                    <h3 className="coin-converted-price">1 {symbol} = ${formatter(currentPrice)} USD</h3>
+                    <button className='coin-buy'>BUY</button>
+                </div>
 
-                <button className='coin-buy'>BUY</button>
             </div>
 
             <div className="coin-stats">
@@ -167,27 +169,27 @@ function SideBar({ coinId }) {
                 </div>
 
                 <div className="coin-stats-current-price">
-                    <p>Current Price</p> <p>${formatter(currentPrice)}</p>
+                    <p style={{ color: "#003e27" }}>Current Price</p> <p>${formatter(currentPrice)}</p>
                 </div>
 
                 <div className="twentyfourh-hi-lo">
-                    <p>24H high / 24H low</p> <p>${formatter(high24h)} / ${formatter(low24h)}</p>
+                    <p style={{ color: "#003e27" }}>24h High / 24h Low</p> <p>${formatter(high24h)} / ${formatter(low24h)}</p>
                 </div>
 
                 <div className="sevend-hi-lo">
-                    <p>7d high / 7d low</p> <p>${formatter(high7d)} / ${formatter(low7d)}</p>
+                    <p style={{ color: "#003e27" }}>7d High / 7d Low</p> <p>${formatter(high7d)} / ${formatter(low7d)}</p>
                 </div>
 
                 <div className="thirtyd-hi-lo">
-                    <p>30d high / 30d low</p> <p>${formatter(high1mo)} / ${formatter(low1mo)}</p>
+                    <p style={{ color: "#003e27" }}>30d High / 30d Low</p> <p>${formatter(high1mo)} / ${formatter(low1mo)}</p>
                 </div>
 
                 <div className="ninetyd-hi-lo">
-                    <p>90d high / 90d low</p> <p>${formatter(highestPrice)} / ${formatter(lowestPrice)}</p>
+                    <p style={{ color: "#003e27" }}>90d High / 90d Low</p> <p>${formatter(highestPrice)} / ${formatter(lowestPrice)}</p>
                 </div>
 
                 <div className="ath-atl">
-                    <p>All-time high</p> <p>${formatter(ATH)}</p>
+                    <p style={{ color: "#003e27" }}>All-time High</p> <p>${formatter(ATH)}</p>
                 </div>
             </div>
         </>

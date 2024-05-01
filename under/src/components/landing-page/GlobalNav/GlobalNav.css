@@ -13,6 +13,7 @@ html {
     position: sticky;
     z-index: 100;
     justify-content: space-evenly;
+    margin-bottom: 10px;
 }
 
 .global-nav ul {
@@ -30,6 +31,7 @@ html {
 
 .global-nav ul li a {
     display: block;
+    gap: 10px;
     color: white;
     text-align: center;
     padding: 14px 16px;
@@ -48,4 +50,9 @@ html {
 .global-nav ul li {
     display: flex;
     align-items: center;
+}
+
+.global-nav ul li img {
+    margin-right: 20px;
+    width: 120px;
 }

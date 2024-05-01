@@ -35,7 +35,7 @@ function SearchBar({ setResults }) {
 
     return (
         <div className="input-wrapper">
-            <FaSearch id='search-icon' />
+            <FaSearch id='search-icon' size={20} />
             <input type="text" placeholder='Type to search...' value={input} onChange={(e) => handleChange(e.target.value)} />
         </div>
     )

@@ -11,7 +11,7 @@ function VideoContainer() {
             <div className="video-container">
                 <div className="sub-nav">
                     <div className="right-side">
-                        <img className="logo" src="src/assets/under-high-resolution-logo-transparent.png"></img>
+                        <img className="logo" src="/under-high-resolution-logo-transparent.png"></img>
                     </div>
 
                     <div className="left-side">

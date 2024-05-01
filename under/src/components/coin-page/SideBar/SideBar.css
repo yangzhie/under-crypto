@@ -2,7 +2,6 @@
     display: flex;
     flex-direction: column;
     background-color: beige;
-    padding: 20px;
     margin-bottom: 20px;
 }
 
@@ -18,13 +17,36 @@
 .coin-to-be-converted {
     display: flex;
     align-items: center;
+    justify-content: center;
     margin-bottom: 10px;
 }
 
 .coin-to-be-converted img {
     width: 30px;
     height: 30px;
-    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.coin-to-be-converted p {
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.coin-to-be-converted input {
+    border: 1px solid black;
+    width: 250px;
+}
+
+.converted-coin input {
+    border: 1px solid black;
+    margin-left: 20px;
+    width: 250px;
+
+}
+
+.converted-coin p {
+    margin-left: 16px;
+    font-weight: bold;
 }
 
 .middle-breaker {
@@ -37,28 +59,31 @@
 .converted-coin {
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
+    justify-content: center;
 }
 
-.converted-coin img {
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
+.coin-bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 50px;
+    gap: 30px;
 }
 
 .coin-converted-price {
-    margin-top: 10px;
-    color: #555;
+    width: 200px;
 }
 
 .coin-buy {
     background-color: #003e27;
     color: #fff;
-    padding: 10px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: 0.3s ease-in-out;
+    width: 75px;
+    height: 50px;
 }
 
 .coin-buy:hover {
@@ -70,8 +95,6 @@
     display: flex;
     flex-direction: column;
     background-color: beige;
-    padding: 20px;
-    margin-left: 50px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -81,19 +104,13 @@
     font-weight: bolder;
     padding: 10px;
     margin-bottom: 20px;
-}
-
-.coin-stats div p:nth-child(1) {
-    color: #003e27;
-}
-
-.coin-stats div p:nth-child(2) {
-    color: goldenrod;
-    font-weight: bolder;
+    display: flex;
+    justify-content: center;
 }
 
 .coin-stats p {
     margin: 5px 0;
+    font-weight: bolder;
 }
 
 .ath-atl,
@@ -105,6 +122,8 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
+    margin-left: 15px;
+    color: goldenrod;
 }
 
 .ath-atl p,
@@ -113,5 +132,5 @@
 .sevend-hi-lo p,
 .twentyfourh-hi-lo p,
 .coin-stats-current-price p {
-    color: #555;
+    margin-right: 15px;
 }
