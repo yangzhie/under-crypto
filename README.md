@@ -3,7 +3,8 @@ UnderCrypto is a cryptocurrency exchange with a user-friendly GUI. It is an SPA 
 
 Due to the limitations of the a public API, the search bar is limited to searching a specific coin. However, by viewing [this particular](https://api.coinranking.com/v2/coins) JSON formatted page, you can obtain the uuid of any coin and enter it into UnderCrypto's address bar in the format of '/coin/{uuid}' and the corresponding cryptocurrency's page should be available.
 
-**Live Project:** [View my live project!](https://vercel.com/arnav-malasis-projects/under-crypto)
+**Live Project:** [View my live project!](https://under-crypto.vercel.app/)
+
 **Trello Board:** [My board!](https://trello.com/b/QiMFfFiP/crypto-exchange)
 
 ### :page_with_curl: Technologies used
