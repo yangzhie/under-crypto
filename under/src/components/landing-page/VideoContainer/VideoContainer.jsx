@@ -5,6 +5,8 @@ import { MdLanguage } from "react-icons/md"
 
 import './VideoContainer.css'
 
+import video from '/src/assets/bitcoin_-_63667 (Original).mp4'
+
 function VideoContainer() {
     return (
         <>
@@ -49,7 +51,7 @@ function VideoContainer() {
 
 
                 <video autoPlay muted loop>
-                    <source src="src/assets/bitcoin_-_63667 (Original).mp4" type="video/mp4" />
+                    <source src={video} />
                 </video>
 
             </div>

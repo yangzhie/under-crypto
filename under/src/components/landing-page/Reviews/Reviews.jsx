@@ -2,6 +2,11 @@ import React, { useState, useEffect } from 'react'
 
 import './Reviews.css'
 
+import finderImg from '/src/assets/finder-awards.png'
+import forexImg from '/src/assets/forex-brokers.png'
+import forbesImg from '/src/assets/forbes-advisor.png'
+import tpImg from '/src/assets/trustpilot.png'
+
 function Reviews() {
     const [condition, setCondition] = useState(false);
 
@@ -18,10 +23,10 @@ function Reviews() {
 
     return (
         <div className='bg'>
-            <img className={`hidden ${condition ? 'show' : 'hidden'}`} src="src/assets/finder-awards.png" alt="" />
-            <img className={`hidden ${condition ? 'show' : 'hidden'}`} src="src/assets/forex-brokers.png" alt="" />
-            <img className={`hidden ${condition ? 'show' : 'hidden'}`} src="src/assets/forbes-advisor.png" alt="" />
-            <img className={`hidden ${condition ? 'show' : 'hidden'}`} src="src/assets/trustpilot.png" alt="" />
+            <img className={`hidden ${condition ? 'show' : 'hidden'}`} src={finderImg} />
+            <img className={`hidden ${condition ? 'show' : 'hidden'}`} src={forexImg} />
+            <img className={`hidden ${condition ? 'show' : 'hidden'}`} src={forbesImg} />
+            <img className={`hidden ${condition ? 'show' : 'hidden'}`} src={tpImg} />
         </div>
     );
 }
