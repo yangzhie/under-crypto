@@ -6,11 +6,13 @@ import { FaUserLock } from "react-icons/fa"
 import { BsFillPeopleFill } from "react-icons/bs"
 import { PiCurrencyBtcFill } from "react-icons/pi"
 
+import certImg from '/src/assets/blockchain-aus-cert.png'
+
 function Blockchain() {
     return (
         <div className="container">
             <div className="image-container">
-                <img src="src/assets/blockchain-aus-cert.png" alt="" style={{ width: '100%', height: '150px' }} />
+                <img src={certImg} alt="" style={{ width: '100%', height: '150px' }} />
             </div>
 
             <div className="heading" style={{ color: "goldenrod", fontWeight: "bolder", fontSize: "20px" }}>The trusted Australian platform</div>
